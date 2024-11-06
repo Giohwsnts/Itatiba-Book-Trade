@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg,#000000, #3533cd);
+    padding: 0;
+}
+
+.forum-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+.new-post, #posts {
+    margin-top: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    border-color:#3533cd ;
+}
+
+button {
+    padding: 10px 20px;
+    background:linear-gradient(90deg, #000000, #3533cd);
+    color: #fff; 
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.custom-upload {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(90deg, #000000, #3533cd); /* Gradiente azul */
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-upload::before {
+    content: '📷'; /* Ícone de câmera para upload */
+    position: absolute;
+    left: 15px;
+    font-size: 18px;
+}
+
+.custom-upload:hover {
+    background: linear-gradient(90deg, #000000, #3533cd); /* Inverte o gradiente */
+    transform: scale(1.05); /* Efeito de leve aumento */
+}
+
+button:hover {
+    background: linear-gradient(90deg, #000000, #3533cd); /* Inverte o gradiente */
+    transform: scale(1.05); /* Efeito de leve aumento */
+}
+
+.post {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.post h3 {
+    margin: 0 0 10px;
+}
+
+.post p {
+    margin: 0;
+}
+
+img {
+    display: block;
+    margin-top: 10px;
+}
+
+#back-home {
+    background: #fff;
+    color:#000000;
+}
+

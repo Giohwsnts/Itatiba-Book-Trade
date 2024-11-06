@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórum</title>
+    <link rel="stylesheet" href="styles4.css">
+</head>
+<body>
+    <button id="back-home" class="back-home-btn">🏠Home d</button>
+    <div class="forum-container">
+        <h1>Fórum de Discussão</h1>
+        <div class="new-post">
+            <h2>Crie um novo Post</h2>
+            <input type="text" id="user-name" placeholder="Seu Nome">
+            <input type="text" id="post-title" placeholder="Título do Post">
+            <textarea id="post-content" placeholder="Escreva seu post aqui..."></textarea>
+            <input type="file" id="post-image" style="display: none;">
+            <label for="post-image" class="custom-upload"> -- Escolher Imagem</label><br>
+            <button id="create-post">Criar Post</button>
+        </div>
+
+        <div id="posts">
+            <h2>Posts</h2>
+            <!-- Os posts aparecerão aqui -->
+        </div>
+    </div>
+    
+    <script src="script4.js"></script>
+</body>
+</html>

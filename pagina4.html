@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualização do Livro - A Arte da Guerra</title>
+    <link rel="stylesheet" href="styles5.css">
+</head>
+<body>
+    <!-- Botão de Home -->
+    <div class="home-button-container">
+        <button class="home-button" onclick="window.location.href='pagina2.html'">🏠 Home</button>
+    </div>
+
+    <div class="container">
+        <div class="book-card">
+            <img src="images/suntzu.jpg" alt="A Arte da Guerra" class="book-image">
+            <h1 class="book-title">A ARTE DA GUERRA - SUN TZU</h1>
+            <p class="book-description">
+                Os ensinamentos estratégicos de Sun Tzu são atemporais e aplicáveis a diversas áreas, desde batalhas até a vida moderna. Este livro revela a importância do planejamento, da disciplina e do autoconhecimento.
+            </p>
+            <div class="button-container">
+                <button class="button" onclick="window.open('https://www.amazon.com.br/arte-guerra-Sun-Tzu/dp/6559573729/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2GLED2UIKW98A&dib=eyJ2IjoiMSJ9.7ERBDDpZFf-3lbm69A2pmL6UYE6rKMyEpMSUqWxkUwy8dg-oWLDLQsZt80gMHI6cxTJKpoXy3A51eu6a2wmu-vGT0pvXbeYSZY_pYsg2SVpkzS_moup5muoffljnIC60pd0RYm1lUeydVPQBbzMQ4kxtu0Qi5pitc2RDx_r1eAC2Yy5C101s8jGD9BduQS4bcEDH012o6jp1bdZkEAQ4R7oFhig9SfOfLSLqa6iueIDqrcrrK8gGLq0mnpqMJNlvswKGDC5V0tW6j176ZJUKIK9GDWvulEtjWagogH-gT8w.Di28YxJh6aT4rQVSwpog7SvlCTe5aShltzdzwSWIKTw&dib_tag=se&keywords=sun+tzu+arte+da+guerra+ver%C3%ADssimo&qid=1730919004&sprefix=sun+tzu+arte+da+guerra+amazon+ver%C3%ADssimo%2Caps%2C750&sr=8-1', '_blank')">Comprar na Amazon</button>
+                <button class="button" onclick="document.getElementById('exchange-form').style.display='block'">TROCAR</button>
+            </div>            
+        </div>
+
+        <div class="book-container">
+            <div class="book">
+                <a href="pagina3.html"><img src="images/coraline.jpg" alt="Coraline"></a>
+                <h2>Coraline</h2>
+                <p>Descrição do livro Coraline...</p>
+            </div>
+            <div class="book">
+                <a href="pagina5.html"><img src="images/alice.jpg" alt="Alice no País das Maravilhas"></a>
+                <h2>Alice no País das Maravilhas</h2>
+                <p>Descrição do livro Alice no País das Maravilhas...</p>
+            </div>
+        </div>
+
+        <!-- Formulário de Troca -->
+        <div id="exchange-form" class="form-popup">
+            <form class="form-container">
+                <h3>Solicitar Troca</h3>
+                <input type="text" placeholder="Nome do livro para troca" required>
+                <textarea placeholder="Informações sobre a troca..." required></textarea>
+                <button type="submit" class="button">Solicitar Troca</button>
+                <button type="button" class="button cancel" onclick="document.getElementById('exchange-form').style.display='none'">Fechar</button>
+            </form>
+        </div>
+
+        <!-- Seção de Perguntas e Respostas -->
+        <div class="questions-section">
+            <h2>Perguntas e Respostas</h2>
+            <div id="questions-list" class="questions-list">
+                <div class="question-item">
+                    <strong>Pergunta:</strong> Qual é o público-alvo indicado para A Arte da Guerra?
+                    <br><strong>Resposta:</strong> Leitores interessados em estratégia e liderança.
+                </div>
+                <div class="question-item">
+                    <strong>Pergunta:</strong> Onde posso comprar este livro?
+                    <br><strong>Resposta:</strong> Você pode encontrar em livrarias online e físicas.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onclick = function(event) {
+            if (event.target.matches('.form-popup')) {
+                event.target.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

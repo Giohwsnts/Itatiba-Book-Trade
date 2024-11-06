@@ -1,0 +1,194 @@
+* {
+    box-sizing: border-box; /* Define como as bordas e o preenchimento devem afetar o tamanho do elemento */
+}
+
+body {
+    margin: 320px;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #000000, #3533cd);
+    color: white; /* Texto branco */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Organiza em coluna */
+    height: 100vh; /* Ocupa a altura total da viewport */
+    padding: 20px; /* Adiciona um pouco de espaçamento nas laterais */
+}
+
+.container {
+    text-align: center; /* Centraliza o texto */
+    width: 90%;
+    max-width: 600px; /* Largura máxima da container */
+}
+
+.book-card {
+    background-color: rgba(53, 51, 205, 0.9); /* Fundo da carta */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    margin-bottom: 20px; /* Margem abaixo do cartão */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+.book-image {
+    width: 100%; /* Imagem ocupa a largura total */
+    border-radius: 10px; /* Bordas arredondadas para a imagem */
+    max-width: 200px; /* Largura máxima da imagem */
+    height: auto; /* Mantém a proporção */
+}
+
+.book-title {
+    font-size: 24px; /* Tamanho da fonte do título */
+    margin: 15px 0; /* Margem superior e inferior */
+}
+
+.book-description {
+    font-size: 16px; /* Tamanho da fonte da descrição */
+    margin: 15px 0; /* Margem superior e inferior */
+    line-height: 1.5; /* Aumenta a altura da linha para melhor legibilidade */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Centraliza os botões */
+    gap: 10px; /* Espaçamento entre os botões */
+}
+
+.button {
+    background-color: #f39c12; /* Cor do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Sem borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+    font-size: 16px; /* Tamanho da fonte do botão */
+    flex: 1; /* Botões ocupam espaço igual */
+}
+
+.button:hover {
+    background-color: #e67e22; /* Cor ao passar o mouse */
+}
+
+.suggestions-title {
+    font-size: 20px; /* Tamanho do título de sugestões */
+    margin: 20px 0; /* Margem superior e inferior */
+}
+
+.suggestions {
+    display: grid; /* Usar grid para exibir sugestões */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsivo */
+    gap: 10px; /* Espaço entre os itens */
+}
+
+.suggestion {
+    background-color: rgba(255, 255, 255, 0.1); /* Cor de fundo das sugestões */
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto nas sugestões */
+    transition: background-color 0.3s; /* Transição suave para o hover */
+}
+
+.suggestion:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Cor ao passar o mouse */
+}
+
+/* Estilo dos formulários */
+.form-popup {
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Posiciona em relação à tela */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com opacidade */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    z-index: 1000; /* Coloca acima de outros elementos */
+}
+
+.form-container {
+    background-color: rgba(53, 51, 205, 0.9); /* Fundo do formulário */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    width: 80%; /* Largura do formulário */
+    max-width: 400px; /* Largura máxima */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+textarea, input[type="text"] {
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    margin: 10px 0; /* Margem superior e inferior */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: 1px solid #ccc; /* Borda */
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente */
+    color: white; /* Cor do texto */
+}
+
+textarea {
+    resize: none; /* Impede redimensionamento */
+    height: 100px; /* Altura fixa */
+}
+
+.questions-section {
+    margin-top: 20px; /* Margem superior */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.questions-list {
+    text-align: left; /* Alinha texto à esquerda */
+    max-height: 300px; /* Altura máxima para rolagem */
+    overflow-y: auto; /* Permite rolagem vertical */
+}
+
+.question-item {
+    margin-bottom: 10px; /* Margem inferior entre as perguntas */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: rgba(0, 0, 0, 0.2); /* Fundo das perguntas */
+}
+
+.book-container {
+    display: flex; /* Usa Flexbox para alinhar os itens lado a lado */
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se não houver espaço */
+    justify-content: center; /* Centraliza os itens no contêiner */
+    margin: 0 auto; /* Centraliza o contêiner na página */
+    max-width: 1000px; /* Define uma largura máxima para o contêiner */
+}
+
+.book {
+    margin: 20px; /* Espaçamento em torno de cada caixa */
+    text-align: center; /* Centraliza o texto dentro da caixa */
+    border: 1px solid #ffffff; /* Borda branca */
+    border-radius: 20px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo transparente */
+    width: 150px; /* Largura fixa para as caixas de livro */
+    display: inline-block;
+}
+
+.book img {
+    width: 100px; /* A imagem ocupa toda a largura da caixa */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Bordas arredondadas para a imagem */
+}
+
+.home-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+}
+
+.home-button:hover {
+    background-color: #45a049; /* Cor do botão ao passar o mouse */
+}

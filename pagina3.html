@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualização do Livro - Coraline</title>
+    <link rel="stylesheet" href="styles5.css">
+</head>
+<body>
+    <div class="container">
+                <!-- Botão de Home -->
+                <button class="home-button" onclick="window.location.href='pagina2.html'">🏠Home</button>
+        <div class="book-card">
+            <img src="images/coraline.jpg" alt="Coraline" class="book-image">
+            <h1 class="book-title">CORALINE</h1>
+            <p class="book-description">
+                Coraline é uma história de terror e aventura que segue uma jovem garota que encontra um outro mundo.
+            </p>
+            <div class="button-container">
+                <button class="button" onclick="window.open('https://www.amazon.com.br/Coraline-Acompanha-marcador-p%C3%A1ginas-especial/dp/8551006754/ref=sr_1_1?adgrpid=1137995203624321&dib=eyJ2IjoiMSJ9.DS2xG0Bj6JefoaV31h0d15lmKEFdtihakqQ6OJBGKyVr4wPdeJrCMQynp74Y2goDafkpWw0nlV8EQjZbSJrtC1kCLwF6fbiAoLds19aswDSMS9hxLbTnze0rWJq09y79I-_zimb3GXdXYC0SYUcwMWJCdwpbI_wKMdfGT4yeZAaqC41JvPEO-nuyZFY8Ymb4VXs3G_MswEqKyFt0MecDRKgsweYZtcvM6vEBCEUtRtc90Ea4_HkXJc0_8u1ymHkl16kqe6rrNn2V9uUcO6UzypC9pZ7prdHioy69KZ1JJHM.t2-i99vatEQQjCNJpUAC4dqwH3ZhyiuABhK2VNsk0VA&dib_tag=se&hvadid=71124865832032&hvbmt=be&hvdev=c&hvlocphy=184020&hvnetw=o&hvqmt=e&hvtargid=kwd-71125221618247%3Aloc-20&hydadcr=5625_13210264&keywords=coraline+amazon&qid=1730918933&sr=8-1', '_blank')">Comprar na Amazon</button>
+                <button class="button" onclick="document.getElementById('exchange-form').style.display='block'">TROCAR</button>
+            </div>            
+        </div>
+
+        <div class="book-container">
+            <div class="book">
+                <a href="pagina4.html"><img src=images/suntzu.jpg alt="A Arte da Guerra"></a>
+                <h2>A Arte da Guerra</h2>
+                <p>Descrição do livro A Arte da Guerra...</p>
+            </div>
+            <div class="book">
+                <a href="pagina5.html"><img src="images/alice.jpg" alt="Alice no País das Maravilhas"></a>
+                <h2>Alice no País das Maravilhas</h2>
+                <p>Descrição do livro Alice no País das Maravilhas...</p>
+            </div>
+        </div>
+        <!-- Formulário de Troca -->
+        <div id="exchange-form" class="form-popup">
+            <form class="form-container">
+                <h3>Solicitar Troca</h3>
+                <input type="text" placeholder="Nome do livro para troca" required>
+                <textarea placeholder="Informações sobre a troca..." required></textarea>
+                <button type="submit" class="button">Solicitar Troca</button>
+                <button type="button" class="button cancel" onclick="document.getElementById('exchange-form').style.display='none'">Fechar</button>
+            </form>
+        </div>
+
+        <!-- Seção de Perguntas e Respostas -->
+        <div class="questions-section">
+            <h2>Perguntas e Respostas</h2>
+            <div id="questions-list" class="questions-list">
+                <div class="question-item">
+                    <strong>Pergunta:</strong> Qual é a principal mensagem de Coraline?
+                    <br><strong>Resposta:</strong> A importância da coragem e da busca pela própria identidade.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onclick = function(event) {
+            if (event.target.matches('.form-popup')) {
+                event.target.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

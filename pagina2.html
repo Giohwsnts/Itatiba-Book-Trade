@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="styles2.css">
+    <style>
+        /* Adicione aqui no estilo interno ou em seu styles2.css */
+        #main {
+            margin-left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="width:25%; display:none;" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button><br>
+        <a href="forum.html">Fórum</a><br>
+        <a href="#">Em Breve!</a><br>
+        <a href="#">Em Breve!</a><br>
+    </div>
+
+    <div id="main">
+        <div class="abrir-sidebar">
+            <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+        </div>
+
+        <!-- Conteúdo principal -->
+        <div class="main-content">
+            <h1>Bem-Vindo(a)</h1>
+            <h2>Troque ou anuncie seu livro no melhor site de trocas de Itatiba!!!</h2>
+            <div class="options">
+                <div class="book-option" id="book1">
+                    <a href="pagina3.html"><img src="images/coraline.jpg" alt="Book 1"></a>
+                    <h2>Coraline</h2>
+                    <p>Ao abrir uma porta misteriosa, Coraline se depara com um lugar macabro e fascinante...</p>
+                </div>
+                <div class="book-option" id="book2">
+                    <a href="pagina4.html"><img src="images/suntzu.jpg" alt="Book 2"></a>
+                    <h2>A arte da guerra</h2>
+                    <p>Os profundos ensinamentos de Sun Tzu ajudam a enfrentar as adversidades na vida cotidiana.</p>
+                </div>
+                <div class="book-option" id="book3">
+                    <a href="pagina5.html"><img src="images/alice.jpg" alt="Book 3"></a>
+                    <h2>Alice no País das Maravilhas</h2>
+                    <p>A história de Alice e sua aventura em um mundo fantástico.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Paginação -->
+        <div class="pagination">
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a> 
+            <a href="#">Próximo</a>
+        </div>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+<script>
+function w3_open() {
+    document.getElementById("main").style.marginLeft = "25%";
+    document.getElementById("mySidebar").style.width = "25%";
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+    document.getElementById("main").style.marginLeft = "0%";
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("openNav").style.display = "inline-block";
+}
+</script>
+</html>
