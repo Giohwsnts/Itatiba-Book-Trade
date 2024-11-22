@@ -1,18 +1,19 @@
 * {
-    box-sizing: border-box; /* Define como as bordas e o preenchimento devem afetar o tamanho do elemento */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 320px;
     font-family: 'Arial', sans-serif;
     background: linear-gradient(to bottom, #000000, #3533cd);
-    color: white; /* Texto branco */
+    color: white;
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    flex-direction: column; /* Organiza em coluna */
-    height: 100vh; /* Ocupa a altura total da viewport */
-    padding: 20px; /* Adiciona um pouco de espaçamento nas laterais */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 .container {
@@ -192,3 +193,4 @@ textarea {
 .home-button:hover {
     background-color: #45a049; /* Cor do botão ao passar o mouse */
 }
+
